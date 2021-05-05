@@ -1,4 +1,4 @@
-# Create EPIC_Gene_3_200.rds Data Set
+# Create EPIC_CpGstoGene_min3CpGs.rds & EPIC_Gene_3_200.rds Data Sets
 # Gabriel Odom and Lissette Gomez
 # 2021-05-02
 
