@@ -11,3 +11,4 @@ You will need the following packages:
 - our package coMethDMR
 - Illumina EPIC annotation `IlluminaHumanMethylationEPICanno.ilm10b2.hg19`
 - the parallel package
+- IMA's 450k region-level annotation library (specifically the `ISLANDSInd` data set) from <https://rforge.net/IMA/#sec-4>
