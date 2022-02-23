@@ -42,6 +42,10 @@ saveRDS(
   geneRegionsMin3_ls,
   "data/EPIC_10b4_CpGstoGene_min3CpGs.rds"
 )
+geneRegionsMin3_ls <- readRDS(
+  "data/EPIC_10b4_CpGstoGene_min3CpGs.rds"
+)
+
 
 # NOTE: this parallel computing works in UNIX environments. For Windows, please
 #   use parLapply or similar variants: 
@@ -109,6 +113,15 @@ allClusters_min3_200bp_ls <-
 	unique() #48,564
 
 
+saveRDS(
+  allClusters_min3_200bp_ls,
+  "data/EPIC_10b4_Gene_3_200_unnamed.rds"
+)
+allClusters_min3_200bp_ls <- readRDS(
+  "data/EPIC_10b4_Gene_3_200_unnamed.rds"
+)
+
+
 
 ######  Name Regions  #########################################################
 # system.time(
@@ -150,8 +163,10 @@ system.time(
     output = "dataframe"
   )
 )
-# Parallel: 36.97 sec for first 100 over 2 cores; 58.68 min for 48,564 clusters
+# Parallel: 36.97 sec for first 100 over 2 cores; 62.92 min for 48,564 clusters
 # Parallel: 38.19 sec for first 100 over 3 cores
+
+saveRDS(allClustersDF_ls, "data/EPIC_10b4_3_200_ordered_clusters.rds")
 
 names(allClusters_min3_200bp_ls) <- map(allClustersDF_ls, NameRegion)
 # We believe this is the updated version of EPIC_Gene_3_200.rds; it has 2152
